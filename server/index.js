@@ -57,6 +57,10 @@ app.delete('/delete-file/:filename', (req, res) => {
         return res.status(200).send('File deleted successfully');
     });
 });
+app.get('/', (req, res) => {
+    res.send('Welcome to the Hostel API!');
+});
+
 app.post('/hostel/student', upload.single('student_img'), async (req, res) => {
     try {
         const { date, due_date, name, adhar_num, mobile_num, status, room_number, floor_number, price } = req.body;
