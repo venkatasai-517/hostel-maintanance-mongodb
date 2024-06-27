@@ -78,7 +78,7 @@ function App() {
       if (selectedRecord) {
         // Send PUT request to update the existing record
         response = await axios.put(
-          `http://localhost:5000/hostel/room/${selectedRecord.id}`,
+          `mongodb+srv://sai:Sai%4012345@rooms.ynehj8e.mongodb.net/hostel/room/${selectedRecord.id}`,
           formData,
           {
             headers: {

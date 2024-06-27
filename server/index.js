@@ -15,10 +15,11 @@ app.use(cors());
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads'))); // Serve static files
 
-mongoose.connect('mongodb://localhost:27017/hostel', {
+mongoose.connect('mongodb+srv://sai:Sai%4012345@rooms.ynehj8e.mongodb.net/hostel', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
+
 
 const db = mongoose.connection;
 db.on('error', (error) => console.error('Connection error:', error));
