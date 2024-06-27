@@ -46,7 +46,7 @@ function App() {
   const fetchRooms = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/hostel/singleshares"
+        "https://hostel-maintanance-mongodb-3.onrender.com//hostel/singleshares"
       );
       setOriginalRecords(response.data);
       setRecords(response.data);
